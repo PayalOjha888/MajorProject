@@ -18,7 +18,6 @@ public class ArticleApi {
     ArticleService articleService;
 
     //listing all the articles
-    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/get")
     public ResponseEntity<List<Article>> getAllArticle(){
         return articleService.getArticles();
